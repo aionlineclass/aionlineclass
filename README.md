@@ -168,7 +168,7 @@ Register Now
 
 <div class="card">
 <h3>Artificial Intelligence</h3>
-<p>CBSE AI (Code 843) with practical projects and real-world applications.</p>
+<p>AI with practical projects and real-world applications.</p>
 </div>
 
 <div class="card">
@@ -225,7 +225,7 @@ Register Now
 
 <div class="card">
 <h3>School Students</h3>
-<p>CBSE Classes 9–12 Artificial Intelligence curriculum.</p>
+<p> Artificial Intelligence curriculum.</p>
 </div>
 
 <div class="card">
