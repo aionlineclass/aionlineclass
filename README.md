@@ -1,266 +1,256 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Academy | Online Class Registration</title>
+/* ===========================
+   AI Academy - Modern CSS
+=========================== */
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fb;
-color:#222;
+    background:linear-gradient(135deg,#07162b,#0b3d91,#0d6efd);
+    color:#fff;
+    overflow-x:hidden;
 }
 
-header{
-background:linear-gradient(135deg,#0b3d91,#0d6efd);
-color:#fff;
-padding:80px 20px;
-text-align:center;
+/* Navigation */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    position:fixed;
+    top:0;
+    left:0;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,.25);
+    z-index:1000;
 }
 
-header h1{
-font-size:48px;
-margin-bottom:20px;
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#fff;
 }
 
-header p{
-font-size:20px;
-max-width:750px;
-margin:auto;
-line-height:1.8;
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
 }
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00e5ff;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:60px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:#00e5ff;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* Buttons */
 
 .btn{
-display:inline-block;
-margin-top:35px;
-padding:15px 40px;
-background:#fff;
-color:#0b3d91;
-font-weight:600;
-border-radius:50px;
-text-decoration:none;
-transition:.3s;
+    display:inline-block;
+    margin-top:40px;
+    padding:18px 45px;
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    border-radius:50px;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
 }
 
 .btn:hover{
-background:#ffc107;
-color:#000;
+    transform:translateY(-5px);
+    box-shadow:0 20px 35px rgba(0,0,0,.4);
 }
+
+/* Sections */
 
 section{
-max-width:1200px;
-margin:auto;
-padding:70px 20px;
+    padding:90px 10%;
 }
 
-.title{
-text-align:center;
-font-size:36px;
-margin-bottom:40px;
-color:#0b3d91;
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:60px;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+/* Cards */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
 .card{
-background:#fff;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:35px;
+    transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
 }
 
 .card h3{
-margin-bottom:15px;
-color:#0b3d91;
+    margin-bottom:15px;
+    color:#00e5ff;
 }
 
 .card p{
-line-height:1.7;
-color:#555;
+    color:#ddd;
+    line-height:1.8;
 }
 
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-margin-top:20px;
-}
+/* Features */
 
 .feature{
-background:white;
-padding:20px;
-border-left:5px solid #0d6efd;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.05);
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:18px;
+    background:rgba(255,255,255,.08);
+    padding:18px;
+    border-radius:15px;
 }
 
+.feature i{
+    font-size:28px;
+}
+
+/* CTA */
+
 .cta{
-background:#0b3d91;
-color:white;
-text-align:center;
-padding:70px 20px;
+    text-align:center;
+    padding:100px 20px;
 }
 
 .cta h2{
-font-size:40px;
-margin-bottom:20px;
+    font-size:45px;
+    margin-bottom:20px;
 }
 
 .cta p{
-font-size:18px;
-margin-bottom:30px;
+    color:#ddd;
+    margin-bottom:30px;
 }
+
+/* Footer */
 
 footer{
-background:#081b45;
-color:white;
-text-align:center;
-padding:25px;
-font-size:14px;
+    background:#02111f;
+    text-align:center;
+    padding:25px;
+    color:#bbb;
 }
 
-</style>
+/* Floating WhatsApp */
 
-</head>
+.whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:32px;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+    transition:.3s;
+}
 
-<body>
+.whatsapp:hover{
+    transform:scale(1.1);
+}
 
-<header>
+/* Scrollbar */
 
-<h1>Artificial Intelligence Academy</h1>
+::-webkit-scrollbar{
+    width:8px;
+}
 
-<p>
-Empowering students with future-ready skills in Artificial Intelligence,
-Python Programming, Data Science, Machine Learning, and Big Data Analytics
-through live interactive online classes.
-</p>
+::-webkit-scrollbar-thumb{
+    background:#00c6ff;
+    border-radius:20px;
+}
 
-<a href="https://forms.gle/QqkkB47D7GgsWZV26" class="btn" target="_blank">
-Register Now
-</a>
+/* Responsive */
 
-</header>
+@media(max-width:768px){
 
-<section>
+.hero h1{
+    font-size:38px;
+}
 
-<h2 class="title">Our Courses</h2>
+.hero p{
+    font-size:17px;
+}
 
-<div class="cards">
+nav{
+    padding:15px 20px;
+}
 
-<div class="card">
-<h3>Artificial Intelligence</h3>
-<p>AI with practical projects and real-world applications.</p>
-</div>
+nav ul{
+    display:none;
+}
 
-<div class="card">
-<h3>Python Programming</h3>
-<p>Learn Python from beginner to advanced with hands-on coding practice.</p>
-</div>
+.section-title{
+    font-size:32px;
+}
 
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="title">Why Choose Us?</h2>
-
-<div class="features">
-
-<div class="feature">
-✅ Live Interactive Classes
-</div>
-
-<div class="feature">
-✅ Recorded Sessions
-</div>
-
-<div class="feature">
-✅ Study Materials & Notes
-</div>
-
-
-<div class="feature">
-✅ Practical Coding Sessions
-</div>
-
-
-<div class="feature">
-✅ Doubt Clearing Support
-</div>
-
-<div class="feature">
-✅ Beginner Friendly
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="title">Who Can Join?</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>School Students</h3>
-<p> Artificial Intelligence curriculum.</p>
-</div>
-
-<div class="card">
-<h3>College Students</h3>
-<p>Build programming and AI skills for academic success.</p>
-</div>
-
-<div class="card">
-<h3>Beginners</h3>
-<p>No prior coding experience required.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<h2>Start Your AI Journey Today</h2>
-
-<p>
-Complete the registration form to reserve your seat in our upcoming batch.
-</p>
-
-<a href="https://forms.gle/QqkkB47D7GgsWZV26" class="btn" target="_blank">
-Register for Online Classes
-</a>
-
-</section>
-
-<footer>
-
-© 2026 Artificial Intelligence Academy. All Rights Reserved.
-
-</footer>
-
-</body>
-</html>
+}
