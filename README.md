@@ -1,5 +1,5 @@
-
-
+<!-- This is an HTML comment -->
+<!-- This is an HTML comment -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
