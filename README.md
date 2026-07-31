@@ -23,6 +23,38 @@ footer{background:#081b45;color:#fff;text-align:center;padding:20px}
 
 /* chatbot */
 #chatButton{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#0d6efd;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+@media screen and (max-width: 768px) {
+
+    #chatContainer{
+        width:95%;
+        height:70vh;
+        left:2.5%;
+        right:2.5%;
+        bottom:80px;
+    }
+
+    #chatButton{
+        right:15px;
+        bottom:15px;
+    }
+
+    #inputArea{
+        display:flex;
+        width:100%;
+    }
+
+    #inputArea input{
+        flex:1;
+        min-width:0;
+        font-size:16px;
+    }
+
+    #inputArea button{
+        width:55px;
+        min-width:55px;
+    }
+
+}
 #chatContainer{display:none;flex-direction:column;position:fixed;bottom:90px;right:20px;width:340px;height:470px;background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.25)}
 #chatHeader{background:#0b3d91;color:#fff;padding:15px;font-weight:600}
 #close{float:right;cursor:pointer}
